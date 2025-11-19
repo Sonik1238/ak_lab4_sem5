@@ -1,5 +1,12 @@
-obj-m+=hello.o
+ccflags-y := -I$(src)/inc
+
+obj-m += hello1.o
+obj-m += hello2.o
+
+KDIR ?= /lib/modules/$(shell uname -r)/build
+
 all:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
+	make -C $(KDIR) M=$(PWD) modules
+
 clean:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
+	make -C $(KDIR) M=$(PWD) clean

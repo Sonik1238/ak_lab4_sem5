@@ -1,1 +1,0 @@
-cmd_/home/sonik/Downloads/repos/modules/hello.ko := arm-linux-gnueabihf-ld -r -EL -z noexecstack -T ./scripts/module-common.lds -T ./arch/arm/kernel/module.lds  --build-id  -o /home/sonik/Downloads/repos/modules/hello.ko /home/sonik/Downloads/repos/modules/hello.o /home/sonik/Downloads/repos/modules/hello.mod.o ;  true
